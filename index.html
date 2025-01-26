@@ -9,8 +9,8 @@
 <body>
   <div class="form-container">
     <h1>Report an Issue</h1>
-    <p>Please describe the problem you're facing with the Electricity Bill Calculator, and upload a screenshot if possible.</p>
-    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+    <p>Please describe the problem you're facing with the Electricity Bill Calculator.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
       <!-- Access Key -->
       <input type="hidden" name="access_key" value="b436bd63-068e-4d87-9b03-9bf8165d6d2a">
       <!-- Redirect URL after submission -->
@@ -25,9 +25,6 @@
 
       <label for="issue">Issue Details</label>
       <textarea id="issue" name="message" rows="5" placeholder="Describe the problem you're facing" required></textarea>
-
-      <label for="screenshot">Upload Screenshot (Max: 10MB)</label>
-      <input type="file" id="screenshot" name="file" accept="image/*" max="10485760">
 
       <button type="submit">Submit</button>
     </form>
