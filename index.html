@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Report an Issue</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Problem - eBill Extension</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="reportimg.png" type="image/png">
 </head>
 <body>
-  <div class="form-container">
-    <h1>Report an Issue</h1>
-    <p>Please describe the problem you're facing with the Electricity Bill Calculator.</p>
-    <form action="https://api.web3forms.com/submit" method="POST">
-      <!-- Access Key -->
-      <input type="hidden" name="access_key" value="b436bd63-068e-4d87-9b03-9bf8165d6d2a">
-      <!-- Redirect URL after submission -->
-      <input type="hidden" name="redirect" value="https://thankyou.ebill.minidushashimal.com/">
+    <header>
+        <div class="container">
+            <h1>Report a Problem</h1>
+            <p>We're here to help! Please describe the issue you're facing with the eBill extension.</p>
+        </div>
+    </header>
 
-      <!-- User Fields -->
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <main class="container">
+        <form id="reportForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
 
-      <label for="issue">Issue Details</label>
-      <textarea id="issue" name="message" rows="5" placeholder="Describe the problem you're facing" required></textarea>
+            <div class="form-group">
+                <label for="issueType">Issue Type</label>
+                <select id="issueType" name="issueType" required>
+                    <option value="">Select an issue type</option>
+                    <option value="bug">Bug</option>
+                    <option value="feature">Feature Request</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+            <div class="form-group">
+                <label for="description">Issue Description</label>
+                <textarea id="description" name="description" rows="5" placeholder="Describe the issue in detail..." required></textarea>
+            </div>
+            <p class="note">If you have screenshots, please email them to <a href="mailto:support@ebill.com">hello@minidushashimal.com</a>.</p>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Submit Report
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 eBill Extension. All rights reserved.</p>
+            <p>Need immediate help? <a href="mailto:hello@minidushashimal.com">Contact Support</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
